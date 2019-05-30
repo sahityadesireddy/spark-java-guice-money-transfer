@@ -38,10 +38,7 @@ public class AccountServiceInMemoryImpl implements AccountService {
     if (account == null) {
       throw new IllegalArgumentException("Cannot create empty user.");
     }
-    if (account.getId() == null || account.getId() <= 0) {
-      throw new IllegalArgumentException("User id must be positive.");
-    }
-    if (account.getSortCode() == null || account.getSortCode().isEmpty() || account.getAccountNumber() == null
+   if (account.getSortCode() == null || account.getSortCode().isEmpty() || account.getAccountNumber() == null
         || account.getAccountNumber().isEmpty()) {
       throw new IllegalArgumentException("Invalid account details");
     }
